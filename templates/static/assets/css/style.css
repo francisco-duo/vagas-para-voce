@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+/* Cores */
+
+:root {
+    --primary-bg-color: #8a9cce;
+    --secondary-bg-color: #89ceb2;
+    --yellow-bg-color: #ecc868;
+    --pink-bg-color: #eea6bc;
+    --blue-bg-color: #9db8e7;
+    --text-color: #fff;
+}
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif !important;
+    overflow-x: hidden !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100vw;
+    height: 12vh;
+    background: var(--pink-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo-container {
+    padding: 15px;
+    margin-left: 35px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .logo-container a {
+    color: var(--text-color);
+}
+
+.navbar .nav-items {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    margin-right: 35px;
+}
+
+.navbar .nav-items .nav-item {
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--text-color);
+}
+
+.navbar .nav-items .nav-item a {
+    color: var(--text-color);
+}
+
+@media (max-width: 720px) {
+    .navbar {
+        width: 100vw;
+        height: 12vh;
+        background: var(--primary-bg-color);
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar .logo-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+
+    }
+
+    .navbar .nav-items {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Home Page */
+
+.home {
+    height: 88vh;
+    background-image: url('../img/background.jpg');
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: inherit !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .home-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.home .home-title h1 {
+    /* Colocar uma sombra no titulo para ficar mais visivel */
+    font-size: 64px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+
+.home .home-title p {
+    width: 600px;
+}
+
+.box-home-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 0 0;
+}
+
+.box-home-btn .home-btn {
+    padding: 24px;
+    background: var(--pink-bg-color);
+    color: var(--text-color);
+    margin: 0 16px 16px 0;
+    border-radius: 7px;
+}
