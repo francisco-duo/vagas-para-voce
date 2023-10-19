@@ -29,6 +29,7 @@ SECRET_KEY = get_random_secret_key()
 DEBUG = False
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     '3.134.238.10',
     '3.129.111.220',
     '52.15.118.168',
