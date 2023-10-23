@@ -1,0 +1,34 @@
+{% extends 'site/base_login.html' %}
+
+{% load static %}
+
+{% block title %}Entrar{% endblock title %}
+
+{% block main %}
+<section class="login-page">
+    <div class="login-container">
+        <h3>Acesse com suas credenciais</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-login">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div class="input-login">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password">
+            </div>
+
+            <div class="input-button-form">
+                <button type="button">Entrar</button>
+            </div>
+
+        </form>
+
+        <div class="description-dev">
+            <span>Desenvolvido por <a href="#">Francisco Duó - Faculdade CCI</a></span>
+        </div>
+    </div>
+</section>
+{% endblock main %}

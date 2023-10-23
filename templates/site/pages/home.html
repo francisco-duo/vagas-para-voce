@@ -5,22 +5,17 @@
 {% block title %}Início{% endblock title %}
 
 {% block main %}
-<section class="home">
-    <div class="home-title">
-        <h1>
-            GARANTA SEU EMPREGO
-        </h1>
+<section class="home-page">
+    <div class="home-title-container">
+        <h1>Procurando um vaga?</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At autem sed earum veritatis. Aspernatur odit
+            repellendus cumque explicabo assumenda ipsa doloribus sequi quos. Aspernatur eos nulla obcaecati fugit
+            perspiciatis. Eos.</p>
+    </div>
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus a qui magnam rem, praesentium,
-            nobis perferendis accusamus odit ad doloremque. Earum veritatis magni, culpa iste expedita sed cupiditate
-            illo!
-        </p>
-
-        <div class="box-home-btn">
-            <a class="home-btn" href="">Procuro um emprego</a>
-            <a class="home-btn" href="">Procuro um funcionario</a>
-        </div>
+    <div class="home-links-container">
+        <a href="{% url 'login_page' %}">Pessoa Jurídica</a>
+        <a href="#">Pessoa Física</a>
     </div>
 </section>
 {% endblock main %}

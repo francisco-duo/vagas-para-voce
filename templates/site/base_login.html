@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'site/partials/_head.html' %}
+    
+    <title>Vagas Para Voce - {% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <main>
+        {% block main %}{%endblock main%}
+    </main>
+
+    {% include 'site/partials/_footer.html' %}
+    {% include 'site/partials/_scripts.html' %}
+</body>
+</html>

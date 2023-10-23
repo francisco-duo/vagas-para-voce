@@ -3,12 +3,13 @@
 /* Cores */
 
 :root {
-    --primary-bg-color: #8a9cce;
+    --primary-bg-color: #01E0E9;
     --secondary-bg-color: #89ceb2;
     --yellow-bg-color: #ecc868;
     --pink-bg-color: #eea6bc;
     --blue-bg-color: #9db8e7;
     --text-color: #fff;
+    --text-dark-color:#0B0B0B;
 }
 
 /* Body */
@@ -17,6 +18,10 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif !important;
     overflow-x: hidden !important;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: inherit;
+    background-size: cover;
 }
 
 * {
@@ -25,12 +30,13 @@ body {
     text-decoration: none;
 }
 
+
 /* NAVBAR */
 
 .navbar {
     width: 100vw;
     height: 12vh;
-    background: var(--pink-bg-color);
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,75 +73,104 @@ body {
     color: var(--text-color);
 }
 
-@media (max-width: 720px) {
-    .navbar {
-        width: 100vw;
-        height: 12vh;
-        background: var(--primary-bg-color);
-        display: block;
-        justify-content: center;
-        align-items: center;
-    }
+/* Home page */
 
-    .navbar .logo-container {
-        display: flex;
-        justify-content: center;
-        margin-left: 0;
-
-    }
-
-    .navbar .nav-items {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-}
-
-/* Home Page */
-
-.home {
+.home-page {
     height: 88vh;
-    background-image: url('../img/background.jpg');
-    background-position: center !important;
-    background-size: cover !important;
-    background-repeat: inherit !important;
-
+    width: 100vw;
     display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+
     justify-content: center;
     align-items: center;
 }
 
-.home .home-title {
+.home-title-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    margin-bottom: 34px;
+}
+
+.home-title-container > h1, p {
+    padding: 16px;
+}
+
+.home-title-container p {
     text-align: center;
+    width: 650px;
+}
+
+.home-links-container > a {
+    margin-inline: 16px;
+    padding: 10px;
+    background: var(--primary-bg-color);
     color: var(--text-color);
+    border-radius: 4px;
 }
 
-.home .home-title h1 {
-    /* Colocar uma sombra no titulo para ficar mais visivel */
-    font-size: 64px;
-    color: var(--text-color);
-    margin-bottom: 16px;
-}
+/* Login Page */
 
-.home .home-title p {
-    width: 600px;
-}
-
-.box-home-btn {
+.login-page {
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 24px 0 0 0;
 }
 
-.box-home-btn .home-btn {
-    padding: 24px;
-    background: var(--pink-bg-color);
-    color: var(--text-color);
-    margin: 0 16px 16px 0;
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 48px;
+
+    height: 40vh;
+
+    color: var(--text-dark-color);
+    background-color: var(--text-color);
     border-radius: 7px;
+}
+
+.login-container h3 {
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 34px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+form > div input {
+    width: 350px;
+    height: 32px;
+}
+
+form .input-button-form {
+    align-items: center;
+}
+
+form .input-button-form button {
+    width: 250px;
+    padding: 16px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    background: var(--primary-bg-color);
+
+    border: none;
+    border-radius: 7px;
+}
+
+form .input-button-form button:hover {
+    cursor: pointer;
 }

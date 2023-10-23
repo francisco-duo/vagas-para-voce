@@ -26,14 +26,10 @@ PROJECT_ROOT = os.path.dirname(__file__)
 SECRET_KEY = get_random_secret_key()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1',
-    '3.134.238.10',
-    '3.129.111.220',
-    '52.15.118.168',
-    'vagas-para-voce.onrender.com'
+    "*",
 ]
 
 # Application definition
