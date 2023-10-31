@@ -46,9 +46,9 @@ def criar_vagas(request, ):
         return redirect('/login/')
 
 
-def visualizar_vaga(request, id):
-    if request.user.is_authenticated:
-        vaga = Vagas.objects.get(pk=id)
-        return render(request, 'site/pages/vaga.html', {'vaga': vaga})
-    else:
-        return redirect('/login/')
+# def visualizar_vaga(request, id):
+#     if request.user.is_authenticated:
+#         vaga = Vagas.objects.get(pk=id)
+#         return render(request, 'site/pages/vaga.html', {'vaga': vaga})
+#     else:
+#         return redirect('/login/')
