@@ -1,0 +1,25 @@
+{% extends 'site/base.html' %}
+
+{% load static %}
+
+{% block title %}Entrar{% endblock title %}
+
+{% block main %}
+<section class="home-page">
+    <div class="container">
+        <h1 class="text-center">Vagas disponiveis</h1>
+        {% for vaga in vagas %}
+        <div class="card mt-4">
+            <div class="card-header">
+                {{vaga.dt_criacao_vaga}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ vaga.titulo_vaga }}</h5>
+                <p class="card-text">{{ vaga.decricao }}</p>
+                <a href="{% url 'visualizar_vaga' vaga.id %}" class="btn btn-primary">Candidatar-se</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock main %}

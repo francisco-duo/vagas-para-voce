@@ -1,0 +1,33 @@
+{% extends 'site/base.html' %}
+
+{% load static %}
+
+{% block title %}Entrar{% endblock title %}
+
+{% block main %}
+<section class="home-page">
+    <div class="d-flex justify-content-center align-items-center">
+        <div id="opaco" class="container bg-light rounded p-5 shadow">
+            <form class="row g-3 needs-validation" action="{% url 'cadastra_vaga' %}" method="POST">
+                {% csrf_token %}
+                <div class="col-12">
+                    <label for="yourPassword" class="form-label text-dark">Titulo da Vaga</label>
+                    <input type="text" name="titulo_vaga" class="form-control" id="yourPassword"
+                        required>
+                    <!-- <div class="invalid-feedback">Please enter your password!</div> -->
+                </div>
+                <div class="col-12">
+                    <label for="yourPassword" class="form-label text-dark">Descrição da vaga</label>
+                    <input type="text" name="descricao" class="form-control" id="yourPassword"
+                        required>
+                    <!-- <div class="invalid-feedback">Please enter your password!</div> -->
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100" type="submit">Registrar</button>
+                </div>
+            </form>    
+        </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}

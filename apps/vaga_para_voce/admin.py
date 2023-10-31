@@ -1,3 +1,5 @@
 from django.contrib import admin
+from vaga_para_voce.models.vagas_model import Vagas
 
-# Register your models here.
+
+admin.site.register(Vagas)

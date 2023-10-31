@@ -1,0 +1,1 @@
+from .vagas_model import Candidatar, Vagas

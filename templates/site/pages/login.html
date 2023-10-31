@@ -5,30 +5,75 @@
 {% block title %}Entrar{% endblock title %}
 
 {% block main %}
-<section class="login-page">
-    <div class="login-container">
-        <h3>Acesse com suas credenciais</h3>
-        <form method="POST">
-            {% csrf_token %}
-            <div class="input-login">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+<main>
+    <div class="container">
+
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="{% url 'home_page' %}" class="d-flex align-items-center w-auto">
+                                <span class="fs-5 d-none d-lg-block text-light">VAGAS PARA VOCÊ</span>
+                            </a>
+                        </div><!-- End Logo -->
+
+                        <div class="card mb-3">
+
+                            <div class="card-body">
+
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Acesse sua conta</h5>
+                                    <p class="text-center small">Entre com seu e-mail & sua senha</p>
+                                </div>
+
+                                <form class="row g-3 needs-validation" action="{% url 'login_page' %}" method="POST">
+                                    {% csrf_token %}
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label">Nome de Usuario</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" name="username" class="form-control" id="yourUsername"
+                                                required>
+                                            <!-- <div class="invalid-feedback">Please enter your username.</div> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourPassword" class="form-label">Senha</label>
+                                        <input type="password" name="password" class="form-control" id="yourPassword"
+                                            required>
+                                        <!-- <div class="invalid-feedback">Please enter your password!</div> -->
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" value="true"
+                                                id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Lembre de mim</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">Login</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="small mb-0">Não possui uma conta? <a
+                                                href="{% url 'register_page' %}">Crie uma conta</a></p>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="credits">
+                            <span>Desenvolvido por</span> <a href="https://bootstrapmade.com/">Francisco Duó</a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-            <div class="input-login">
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password">
-            </div>
-
-            <div class="input-button-form">
-                <button type="button">Entrar</button>
-            </div>
-
-        </form>
-
-        <div class="description-dev">
-            <span>Desenvolvido por <a href="#">Francisco Duó - Faculdade CCI</a></span>
-        </div>
+        </section>
     </div>
-</section>
+</main>
 {% endblock main %}

@@ -3,13 +3,24 @@
 /* Cores */
 
 :root {
-    --primary-bg-color: #01E0E9;
+    --primary-bg-color: #9C0016;
     --secondary-bg-color: #89ceb2;
     --yellow-bg-color: #ecc868;
     --pink-bg-color: #eea6bc;
     --blue-bg-color: #9db8e7;
     --text-color: #fff;
     --text-dark-color:#0B0B0B;
+}
+
+/* Colors */
+.bg-primary {
+    background-color: var(--primary-bg-color) !important;
+}
+
+/* btn colors */
+.btn-primary {
+    background-color: var(--primary-bg-color) !important;
+    border: var(--primary-bg-color) !important;
 }
 
 /* Body */
@@ -52,6 +63,7 @@ body {
 
 .navbar .logo-container a {
     color: var(--text-color);
+    text-decoration: none;
 }
 
 .navbar .nav-items {
@@ -71,9 +83,13 @@ body {
 
 .navbar .nav-items .nav-item a {
     color: var(--text-color);
+    text-decoration: none;
 }
 
 /* Home page */
+#opaco {
+    backdrop-filter: blur( 13.5px );
+}
 
 .home-page {
     height: 88vh;
@@ -110,6 +126,7 @@ body {
     background: var(--primary-bg-color);
     color: var(--text-color);
     border-radius: 4px;
+    text-decoration: none;
 }
 
 /* Login Page */
@@ -173,4 +190,9 @@ form .input-button-form button {
 
 form .input-button-form button:hover {
     cursor: pointer;
+}
+
+/* Login */
+#login-page {
+    background-image: url('');
 }

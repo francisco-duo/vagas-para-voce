@@ -6,16 +6,20 @@
 
 {% block main %}
 <section class="home-page">
-    <div class="home-title-container">
-        <h1>Procurando um vaga?</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At autem sed earum veritatis. Aspernatur odit
-            repellendus cumque explicabo assumenda ipsa doloribus sequi quos. Aspernatur eos nulla obcaecati fugit
-            perspiciatis. Eos.</p>
-    </div>
+    <div id="opaco" class="container bg-light rounded p-5 shadow">
+        <h1 class="text-center text-dark">
+            PROCURANDO POR UM EMPREGO?
+        </h1>
+        <p class="fs-5 text-center text-dark">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam optio facilis tempora maiores!
+            Totam, quam placeat? Nisi accusantium voluptates necessitatibus accusamus. Nihil sequi harum, velit porro
+            repellendus minima blanditiis.
+        </p>
 
-    <div class="home-links-container">
-        <a href="{% url 'login_page' %}">Pessoa Jurídica</a>
-        <a href="#">Pessoa Física</a>
+        <div class="d-flex justify-content-center align-items-center">
+            <a class="btn btn-primary mx-2 shadow" href="{% url 'login_page' %}" role="button">FAÇA LOGIN</a> <span class="text-dark"> ou </span> 
+            <a class="btn btn-primary mx-2 shadow" href="{% url 'register_page' %}" role="button">CADASTRE-SE</a>
+        </div>
     </div>
 </section>
 {% endblock main %}
