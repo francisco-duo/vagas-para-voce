@@ -5,8 +5,8 @@
 {% block title %}Entrar{% endblock title %}
 
 {% block main %}
-<section class="home-page">
-    <div class="container">
+<section class="mt-4" style="height: 100vh !important;">
+    <div class="container mb-4">
         <h1 class="text-center">Vagas disponiveis</h1>
         {% for vaga in vagas %}
         <div class="card mt-4">
@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{ vaga.titulo_vaga }}</h5>
-                <p class="card-text">{{ vaga.decricao }}</p>
+                <p class="card-text">{{ vaga.descricao_vaga }}</p>
             </div>
         </div>
         {% endfor %}

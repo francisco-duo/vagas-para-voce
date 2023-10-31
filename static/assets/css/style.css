@@ -3,7 +3,7 @@
 /* Cores */
 
 :root {
-    --primary-bg-color: #9C0016;
+    --primary-bg-color: #F44336;
     --secondary-bg-color: #89ceb2;
     --yellow-bg-color: #ecc868;
     --pink-bg-color: #eea6bc;
@@ -11,7 +11,10 @@
     --text-color: #fff;
     --text-dark-color:#0B0B0B;
 }
-
+/* banner-home */
+.carousel {
+    height: 80vh !important;
+}
 /* Colors */
 .bg-primary {
     background-color: var(--primary-bg-color) !important;
