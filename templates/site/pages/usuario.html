@@ -9,7 +9,7 @@
     <div class="d-flex justify-content-center align-items-center">
         <div id="opaco" class="container bg-light rounded p-5 shadow">
             <h1 class="text-center text-dark">Bem vindo, {{dados.nome}}</h1>
-            <p class="text-center text-dark">{{dados.email}} {{dados.id}}</p>
+            <p class="text-center text-dark">{{dados.email}}</p>
             <div class="d-flex justify-content-center align-items-center">
                 <a class="btn btn-primary mx-2 shadow" href="{% url 'buscar_vaga' %}" role="button">Procurar Vagas</a> <span class="text-dark"> ou </span> 
                 <a class="btn btn-primary mx-2 shadow" href="{% url 'cadastra_vaga' %}" role="button">Registrar Vagas</a>
