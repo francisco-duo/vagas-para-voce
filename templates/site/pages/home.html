@@ -5,44 +5,22 @@
 {% block title %}Início{% endblock title %}
 
 {% block main %}
-<section id="banner-home">
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="../../../static/assets/img/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../../../static/assets/img/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="../../../static/assets/img/banner-home.png" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</section>
 <section class="home-page">
     <div id="opaco" class="container bg-light rounded p-5 shadow">
         <h1 class="text-center text-dark">
             PROCURANDO POR UM EMPREGO?
         </h1>
         <p class="fs-5 text-center text-dark">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quibusdam optio facilis tempora maiores!
-            Totam, quam placeat? Nisi accusantium voluptates necessitatibus accusamus. Nihil sequi harum, velit porro
-            repellendus minima blanditiis.
+            Procurando oportunidades de emprego? Conheça a 'Vaga Para Você'! Somos a solução para quem busca uma
+            carreira de sucesso. Com um amplo banco de vagas e um sistema de matching avançado, conectamos candidatos
+            talentosos às empresas que mais combinam com seus perfis. Cadastre-se agora e dê um salto em sua carreira
+            com a 'Vaga Para Você'. Encontre o emprego dos seus sonhos, hoje mesmo!
         </p>
 
         <div class="d-flex justify-content-center align-items-center">
-            <a class="btn btn-primary mx-2 shadow" href="{% url 'login_page' %}" role="button">FAÇA LOGIN</a> <span
-                class="text-dark"> ou </span>
-            <a class="btn btn-primary mx-2 shadow" href="{% url 'register_page' %}" role="button">CADASTRE-SE</a>
+            <a class="btn btn-color-primary mx-2 shadow" href="{% url 'login_page' %}" role="button">FAÇA LOGIN</a>
+            <span class="text-dark"> ou </span>
+            <a class="btn btn-color-primary mx-2 shadow" href="{% url 'register_page' %}" role="button">CADASTRE-SE</a>
         </div>
     </div>
 </section>

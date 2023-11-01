@@ -10,4 +10,5 @@ urlpatterns = [
     path('usuario/', views.users_view.user_dashboard, name='user_page'),
     path('cadastrar_vaga/', views.users_view.criar_vagas, name='cadastra_vaga'),
     path('vagas/', views.users_view.buscar_vagas, name='buscar_vaga'),
+    path('vagas/search', views.users_view.search_vagas, name='serach_vaga'),
 ]

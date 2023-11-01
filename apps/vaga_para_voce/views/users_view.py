@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from vaga_para_voce.models.vagas_model import Vagas, Candidatar
+from vaga_para_voce.forms import SearchForm
 # from django.contrib.auth.decorators import login_required
 
 
@@ -46,9 +47,15 @@ def criar_vagas(request, ):
         return redirect('/login/')
 
 
-# def visualizar_vaga(request, id):
-#     if request.user.is_authenticated:
-#         vaga = Vagas.objects.get(pk=id)
-#         return render(request, 'site/pages/vaga.html', {'vaga': vaga})
-#     else:
-#         return redirect('/login/')
+def search_vagas(request, ):
+    if request.user.is_authenticated:
+        if request.method == 'GET':
+
+            query = request.GET.get('busca')
+            vagas = Vagas.objects.filter(
+                titulo_vaga__icontains=query
+            )
+            return render(request, 'search_results.html', {'vagas': vagas, 'query': query})
+        return redirect('/usuario/')
+    else:
+        return redirect('/login/')

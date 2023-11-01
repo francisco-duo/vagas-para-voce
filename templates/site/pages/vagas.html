@@ -6,19 +6,31 @@
 
 {% block main %}
 <section class="mt-4" style="height: 100vh !important;">
-    <div class="container mb-4">
-        <h1 class="text-center">Vagas disponiveis</h1>
-        {% for vaga in vagas %}
-        <div class="card mt-4">
-            <div class="card-header">
-                {{vaga.dt_criacao_vaga}}
+    <div class="container">
+        <div class="container mb-4">
+            <h1 class="text-center text-color-dark">Vagas disponiveis</h1>
+
+            <div class="container d-flex justify-content-center my-3">
+                <form method="GET" class="d-flex" role="search">
+                    {% csrf_token %}
+                    <input class="form-control me-2 shadow" name="busca" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-color-primary shadow" type="submit">Buscar vagas</button>
+                </form>
             </div>
-            <div class="card-body">
-                <h5 class="card-title">{{ vaga.titulo_vaga }}</h5>
-                <p class="card-text">{{ vaga.descricao_vaga }}</p>
+            {% for vaga in vagas %}
+            <div class="card mt-4">
+                <div class="card-header">
+                    {{vaga.dt_criacao_vaga}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ vaga.titulo_vaga }}</h5>
+                    <p class="card-text">{{ vaga.descricao_vaga }}</p>
+                    <a class="btn btn-color-primary mx-2 shadow" href="{% url 'cadastra_vaga' %}" role="button">Inscrever-se</a>
+                </div>
+                
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 </section>
 {% endblock main %}

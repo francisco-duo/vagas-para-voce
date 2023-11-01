@@ -3,27 +3,24 @@
 /* Cores */
 
 :root {
-    --primary-bg-color: #F44336;
-    --secondary-bg-color: #89ceb2;
+    --primary: #89ceb2;
     --yellow-bg-color: #ecc868;
     --pink-bg-color: #eea6bc;
     --blue-bg-color: #9db8e7;
     --text-color: #fff;
-    --text-dark-color:#0B0B0B;
+    --text-dark-color:#5A5E4F;
 }
-/* banner-home */
-.carousel {
-    height: 80vh !important;
-}
-/* Colors */
-.bg-primary {
-    background-color: var(--primary-bg-color) !important;
+/* bg colors */
+.bg-color-primary {
+    background: var(--primary) !important;
 }
 
-/* btn colors */
-.btn-primary {
-    background-color: var(--primary-bg-color) !important;
-    border: var(--primary-bg-color) !important;
+.btn-color-primary {
+    background: var(--primary) !important;
+}
+
+.text-color-dark {
+    color: var(--text-dark-color) !important;
 }
 
 /* Body */
@@ -32,7 +29,7 @@ body {
     padding: 0;
     font-family: 'Poppins', sans-serif !important;
     overflow-x: hidden !important;
-    background-image: url('../img/background.jpg');
+    background-image: url('../img/background.png');
     background-position: center;
     background-repeat: inherit;
     background-size: cover;
